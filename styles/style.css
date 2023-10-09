@@ -118,6 +118,8 @@ button:focus-visible {
 
 .result__video-container {
   display: grid;
+  grid-template-columns: 711px;
+  grid-template-rows: 386px;
   justify-self: center;
   inline-size: 100%;
   block-size: 100%;
@@ -133,16 +135,19 @@ button:focus-visible {
 /***Форма поиска***/
 
 .search-form {
-  display: flex;
+  display: grid;
+  grid-template-columns: 225px auto 194px;
   justify-content: space-between;
   align-items: end;
   gap: 40px;
   margin-block-start: 16px;
+  margin-block-end: 5px;
   inline-size: 711px;
   block-size: 54px;
 }
 
 .search-form__fieldset {
+  align-self: center;
   min-inline-size: 212px;
 }
 

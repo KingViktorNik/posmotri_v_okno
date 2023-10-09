@@ -89,8 +89,6 @@ button:focus-visible {
   outline-offset: 1px;
 }
 
-/* - */
-
 .page {
   margin: auto;
   border: 1px solid transparent;
@@ -131,7 +129,7 @@ button:focus-visible {
   block-size: 100%;
 }
 
-/* ** Форма поиска ** */
+/***Форма поиска***/
 
 .search-form {
   display: flex;
@@ -239,7 +237,7 @@ button:focus-visible {
   inline-size: 194px;
 }
 
-/* **панель контента** */
+/***Панель контента***/
 
 .content__details {
   display: grid;

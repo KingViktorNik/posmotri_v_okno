@@ -94,6 +94,7 @@ button:focus-visible {
   align-items: center;
   margin: auto;
   border: 1px solid transparent;
+  padding: 133px 30px;
   color: var(--primary-color);
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;

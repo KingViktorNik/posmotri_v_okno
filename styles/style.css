@@ -1,21 +1,16 @@
+:root {
+
+  --primary-color: #fff;
+
+  --primary-bg-color: #1b1919;
+
+  --accent-color: #545050;
+}
+
 *,
 *::before,
 *::after {
   box-sizing: border-box;
-}
-
-html {
-  block-size: 100%;
-}
-
-.page {
-  inline-size: 1200px;
-  block-size: 100%;
-  margin: auto;
-  color: #fff;
-  font-family: 'Fira Sans Condensed', sans-serif;
-  font-size: 18px;
-  background-color: #1b1919;
 }
 
 h1,
@@ -29,10 +24,325 @@ li,
 blockquote,
 fieldset {
   margin: 0;
+  border: 0;
   padding: 0;
 }
 
 ul,
 ol {
   list-style: none;
+}
+
+html {
+  block-size: 100%;
+}
+
+.preloader ~ .content__list-item {
+  display: none;
+}
+
+.preloader, .error {
+  z-index: 1;
+  grid-column: 1/-1;
+  grid-row: 1/-1;
+}
+
+.button,
+.search-form__pseudo-checkbox,
+.search-form__label-text,
+.content__list-item {
+  cursor: pointer;
+}
+
+button {
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+  font-family: 'Fira Sans Condensed', font-family;
+  font-weight: 700;
+  font-size: 18px;
+  background-color: transparent;
+  block-size: 34px;
+}
+
+button:hover {
+  text-decoration: underline;
+}
+
+button:focus {
+  outline: none;
+}
+
+button:focus-visible {
+  outline: 1px solid var(--primary-color);
+  outline-offset: 1px;
+}
+
+button:active {
+  outline: none;
+  background-color: var(--accent-color);
+}
+
+.page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  border: 1px solid transparent;
+  padding: 133px 30px;
+  color: var(--primary-color);
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-size: 18px;
+  background-color: var(--primary-bg-color);
+  inline-size: 1200px;
+  block-size: 100%;
+}
+
+.content {
+  display: flex;
+  gap: 30px;
+}
+
+.result {
+  display: grid;
+  align-self: end;
+  inline-size: 100%;
+}
+
+/*Видео*/
+
+.result__video-container {
+  display: grid;
+  grid-template-columns: 711px;
+  grid-template-rows: 386px;
+  justify-self: center;
+  inline-size: 100%;
+  block-size: 100%;
+}
+
+.result__video {
+  grid-column: 1/-1;
+  grid-row: 1/-1;
+  object-fit: cover;
+  object-position: center;
+  inline-size: 100%;
+  block-size: 100%;
+}
+
+/***Форма поиска***/
+
+.search-form {
+  display: grid;
+  grid-template-columns: 225px auto 194px;
+  justify-content: space-between;
+  align-items: end;
+  gap: 40px;
+  margin-block-start: 16px;
+  margin-block-end: 5px;
+}
+
+.search-form__fieldset {
+  align-self: center;
+  min-inline-size: 212px;
+}
+
+.search-form__fieldset-title {
+  margin-block-end: 5px;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+/*строка поиска*/
+
+.search-form__label {
+  display: grid;
+  grid-template-columns: 19px auto;
+  align-items: center;
+  gap: 5px;
+  inline-size: 100%;
+}
+
+.search-form__label-text {
+  border-block-end: 1px solid transparent;
+  inline-size: 100%;
+}
+
+.search-form__textfield {
+  border: 0;
+  border-block-start: 1px solid var(--primary-color);
+  border-block-end: 1px solid var(--primary-color);
+  color: inherit;
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-size: 18px;
+  background-color: transparent;
+  inline-size: 100%;
+  min-inline-size: 225px;
+  max-inline-size: 500px;
+}
+
+.search-form__textfield::placeholder {
+  color: rgba(255, 255, 255, 0.70);
+}
+
+.search-form__textfield:focus {
+  outline: none;
+}
+
+.search-form__textfield:focus-visible {
+  outline: 1px solid var(--primary-color);
+  outline-offset: 1px;
+}
+
+.search-form__textfield:active {
+  border-color: transparent;
+  outline: none;
+}
+
+/*время суток*/
+
+.search-form__pseudo-checkbox {
+  height: 19px;
+  border: 1px solid var(--primary-color);
+  inline-size: 19px;
+}
+
+.search-form__checkbox-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.search-form__label:hover .search-form__label-text {
+  border-block-end: 1px solid var(--primary-color);
+}
+
+.search-form__label:has(:focus-visible):has(.search-form__checkbox) {
+  outline: 1px solid var(--primary-color);
+  outline-offset: 1px;
+}
+
+.search-form__checkbox:checked + span {
+  border: 1px solid var(--primary-bg-color);
+  box-shadow: 0 0 0 1px var(--primary-color);
+  background-color: var(--primary-color);
+}
+
+/*кнопка поиски*/
+
+.search-form__submit-button {
+  inline-size: 194px;
+}
+
+/***Панель контента***/
+
+.content__details {
+  display: grid;
+  grid-template-columns: max-content;
+  align-content: end;
+  gap: 26px;
+}
+
+.title {
+  align-self: end;
+  font-family: Oswald, sans-serif;
+  font-size: 75px;
+  line-height: 0.94;
+  text-transform: uppercase;
+  inline-size: 100%;
+}
+
+.content__accent {
+  color: var(--accent-color);
+}
+
+.content__list {
+  display: grid;
+  grid-template-columns: 100%;
+  gap: 30px;
+  align-self: start;
+  padding: 1px;
+  overflow: auto;
+  min-inline-size: 399px;
+  block-size: 298px;
+}
+
+.content__list:focus-visible {
+  outline: 1px solid transparent;
+}
+
+.content__list-item {
+  margin-block-end: auto;
+  padding: 2px;
+  inline-size: 100%;
+}
+
+.content__card-link {
+  display: block;
+  color: var(--primary-color);
+  text-decoration: none;
+  background-color: transparent;
+}
+
+.content__card-link:focus {
+  outline: none;
+}
+.content__video-card {
+  display: flex;
+  justify-content: space-between;
+}
+
+.content__video-card-description-container {
+  min-inline-size: 200px;
+}
+
+.content__video-card-title {
+  font-family: Oswald, sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+
+.content__video-card-description {
+  font-family: Oswald, sans-serif;
+  line-height: 0.9;
+}
+
+.content__video-card-thumbnail {
+  object-fit: cover;
+  object-position: center;
+  inline-size: 194px;
+  block-size: 103px;
+}
+
+.content__list > li:last-child {
+  inline-size: 99%;
+}
+
+.content__card-link:focus-visible {
+  outline: 1px solid var(--primary-color);
+  outline-offset: 1px;
+}
+
+.content__card-link:hover > .content__video-card {
+  text-decoration: underline;
+}
+
+
+:is(.content__card-link_current > .content__video-card,
+    .content__card-link:active > .content__video-card) {
+  background-color: var(--accent-color);
+}
+
+.more-button {
+  margin: 2px;
+  inline-size: 100%;
+}
+
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  inline-size: 1px;
+  block-size: 1px;
+  clip-path: inset(50%);
+  white-space: nowrap;
 }

@@ -84,6 +84,7 @@ button:active {
 
 .page {
   display: flex;
+  justify-content: center;
   align-items: center;
   margin: auto;
   border: 1px solid transparent;
@@ -137,8 +138,6 @@ button:active {
   gap: 40px;
   margin-block-start: 16px;
   margin-block-end: 5px;
-  inline-size: 711px;
-  block-size: 54px;
 }
 
 .search-form__fieldset {
@@ -243,12 +242,12 @@ button:active {
 }
 
 .title {
+  align-self: end;
   font-family: Oswald, sans-serif;
   font-size: 75px;
   line-height: 0.94;
   text-transform: uppercase;
   inline-size: 100%;
-  min-block-size: 210px;
 }
 
 .content__accent {
@@ -259,6 +258,7 @@ button:active {
   display: grid;
   grid-template-columns: 100%;
   gap: 30px;
+  align-self: start;
   padding: 1px;
   overflow: auto;
   min-inline-size: 399px;
@@ -276,11 +276,15 @@ button:active {
 }
 
 .content__card-link {
+  display: block;
   color: var(--primary-color);
   text-decoration: none;
   background-color: transparent;
 }
 
+.content__card-link:focus {
+  outline: none;
+}
 .content__video-card {
   display: flex;
   justify-content: space-between;
@@ -291,12 +295,14 @@ button:active {
 }
 
 .content__video-card-title {
+  font-family: Oswald, sans-serif;
   font-weight: 700;
   font-size: 30px;
   text-transform: uppercase;
 }
 
 .content__video-card-description {
+  font-family: Oswald, sans-serif;
   line-height: 0.9;
 }
 

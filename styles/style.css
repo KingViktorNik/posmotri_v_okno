@@ -37,16 +37,6 @@ html {
   block-size: 100%;
 }
 
-.visually-hidden {
-  position: absolute;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  inline-size: 1px;
-  block-size: 1px;
-  clip-path: inset(50%);
-  white-space: nowrap;
-}
-
 .preloader ~ .content__list-item {
   display: none;
 }
@@ -321,4 +311,14 @@ button:focus-visible {
 
 .content__list:focus {
   outline: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  inline-size: 1px;
+  block-size: 1px;
+  clip-path: inset(50%);
+  white-space: nowrap;
 }

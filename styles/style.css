@@ -8,16 +8,6 @@ html {
   block-size: 100%;
 }
 
-.visually-hidden {
-  position: absolute;
-  inline-size: 1px;
-  block-size: 1px;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  white-space: nowrap;
-}
-
 .page {
   inline-size: 1200px;
   block-size: 100%;
@@ -45,6 +35,28 @@ fieldset {
 ul,
 ol {
   list-style: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.button {
+  padding-block: 5px;
+  width: 100%;
+  color: inherit;
+  background-color: inherit;
+  border: 1px solid currentColor;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 700;
+  cursor: pointer;
 }
 
 .content {
@@ -82,7 +94,7 @@ ol {
 .search-form {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
   gap: 40px;
   width: 100%;
 }
@@ -133,7 +145,7 @@ ol {
 }
 
 .search-form__submit-button {
-  margin-block: auto;
+  align-self: flex-end;
   min-width: 194px;
   width: fit-content;
   cursor: pointer;

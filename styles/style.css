@@ -289,7 +289,6 @@ ol {
 
 .content__video-card-description-container {
   flex-grow: 1;
-  inline-size: max-cnotent;
   block-size: 100%;
 }
 

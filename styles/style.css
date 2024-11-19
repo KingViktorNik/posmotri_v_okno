@@ -27,7 +27,6 @@ html {
   font-size: 18px;
   color: var(--text-color, #fff);
   background-color: var(--bg-color, #545050);
-
 }
 
 h1,
@@ -110,9 +109,9 @@ ol {
 .result__video-container {
   position: relative;
   flex-grow: 1;
+  padding-block-start: 78px;
   inline-size: 100%;
   block-size: calc(100% - 78px);
-  padding-block-start: 78px;
 }
 
 .result__video {

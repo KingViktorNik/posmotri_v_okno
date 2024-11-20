@@ -97,9 +97,8 @@ ol {
   gap: 30px;
   inline-size: 100%;
   block-size: 100%;
-  padding-block-start: 267px;
-  padding-block-end: 292px;
   padding-inline: 30px;
+  padding-block: 267px;
 }
 
 .result {

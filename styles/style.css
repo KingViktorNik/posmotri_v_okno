@@ -94,11 +94,11 @@ ol {
 
 .content {
   display: flex;
+  align-items: flex-end;
   gap: 30px;
   inline-size: 100%;
-  block-size: 100%;
   padding-inline: 30px;
-  padding-block: 267px;
+  padding-block: 133px;
 }
 
 .result {
@@ -109,13 +109,14 @@ ol {
   padding-block-start: 78px;
   inline-size: 100%;
   block-size: 100%;
+  color: currentColor;
 }
 
 .result__video-container {
   position: relative;
   flex-grow: 1;
   inline-size: 100%;
-  block-size: calc(100% - 78px);
+  block-size: 386px;
 }
 
 .result__video {
@@ -129,7 +130,7 @@ ol {
 .search-form {
   display: flex;
   justify-content: space-between;
-  align-items: end;
+  align-items: flex-end;
   inline-size: 100%;
 }
 
@@ -240,7 +241,7 @@ ol {
 .content__list {
   position: relative;
   inline-size: 100%;
-  block-size: 100%;
+  block-size: 298px;
   overflow: auto;
 }
 
